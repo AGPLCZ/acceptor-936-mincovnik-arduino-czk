@@ -12,6 +12,14 @@
 > Arduino UNO R3 Wifi, Arduino UNO R4 Wifi 
 
 
+### Zapojení mincovníku
+- (Mincovník) DC 12 (červený drát)  --> V in (arduino)
+- (Mincovník) GND (černý drát)      --> GND (arduino)
+- 
+
+
+
+
 ### Nastavení mincovníku "acceptor-936" 
 
 #### Základní nastavení 
