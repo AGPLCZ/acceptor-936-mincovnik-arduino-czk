@@ -1,3 +1,6 @@
+// After throwing a preset amount, a message is displayed and, for example, a relay can be switched (or a web address can be retrieved - GET)
+// This code works by activating an interrupt (function coinInsertInterrupt) upon coin detection, incrementing the total number of detected coins. In the main loop (loop), it checks if enough time has passed since the last detection and if the current balance has reached the required amount. If so, it sends a message and resets the current balance and the total number of detected coins.
+
 const int coinDetectionPin = 2; // Pin connected to the coin detector
 const int requiredAmount = 75; // Amount that needs to be reached to release product
 volatile long totalInterruptsCount = 0; // Total number of detected coins
