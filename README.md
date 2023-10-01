@@ -50,3 +50,82 @@ H,P,F opakujte podle E nastavených počtu druhů mincí:
 - Vhoďtě 20 CZK do mincovníku (opakujte podle H)
 - Stiknětě SET 1x
 - Vhoďtě 50 CZK do mincovníku (opakujte podle H)
+
+
+
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+```
+
+
+🔴🟠🟡🟢🔵🟣🟤⚫⚪🔘🛑⭕
+
+🟥🟧🟨🟩🟦🟪🟫⬛⬜🔲🔳⏹☑✅❎
+
+❤️🧡💛💚💜💙🤎🖤🤍♥️💔💖💘💝💗💓💟💕❣️♡
+
+🔺🔻🔷🔶🔹🔸♦💠💎💧🧊
+
+🏴🏳🚩🏁
+
+◻️◼️◾️◽️▪️▫️
+
+
+> [!NOTE]  
+> Highlights information that users should take into account, even when skimming.
+
+> [!IMPORTANT]  
+> Crucial information necessary for users to succeed.
+
+> [!WARNING]  
+> Critical content demanding immediate user attention due to potential risks.
+
+
+$\mathcal{\color{purple}{this \ is \ a \ paragraph} \ \color{cyan}{in \ another \ font}}$
+
+$\mathbb{\color{teal}{this \ is \ a } \ \color{magenta}{paragraph \ in \ another \ font}}$
+
+$\mathscr{\color{red}{this} \ \ \color{blue}{is \ \ a \ \ paragraph} \ \ \color{yellow}{in \ \ another \ \ font}}$
+
+$\mathfrak{\color{lime}{this \ is \ a \ paragraph \ in \ another \ font}}$
+
+$\mathscr{\color{red}{mon}\color{white}{day}}$
+
+$\textcolor{olive}{\TeX} \ \textcolor{darkgray}{workaround \ found \ by \ Dassalem \ Mohammed \ Yasser}$
+
+$\textit{hello}$  #italic
+
+$\text{hello}$    #normal
+
+$\Large{hello}$$   #Bigger text size
+
+$$\LaTeX$$
+
+
+
+$\colorbox{red}{text}$
+
+Text inside bordered Box 
+
+$\fbox{Hello there}$
+
+
+
+$\color[rgb]{1,0,1} hello$
+
+$\color[RGB]{155,127,0} hello$
+
+$\color[gray]{0.3} hello$
+
+
+
+#f03c15  hghgj 
+#f03c15 jkkj 
+#c5f015 lkjl k
+#c5f015 kj kl
+#1589F0 jkljjl 
+#1589F0 jlkj 
