@@ -4,6 +4,8 @@
 
 - po vhození přednastavené částky se vypíše zpráva a může se například sepnout relé (či načíst webová adresa - GET)
 
+Tento kód v CZK funguje tak, že při detekci mince se aktivuje přerušení (funkce preruseniPriVhozuMince), což zvýší celkový počet detekovaných mincí. V hlavní smyčce loop kontrolujeme, zda uplynul dostatečný čas od poslední detekce a zda současný zůstatek dosáhl požadované ceny. Pokud ano, posíláme zprávu a vynulujeme současný zůstatek a celkový počet detekovaných mincí.
+
 
 > [!IMPORTANT]  
 > Arduino UNO R3 Wifi, Arduino UNO R4 Wifi: musíte napájet 12V kvůli mincovníku (nestačí USB) 
