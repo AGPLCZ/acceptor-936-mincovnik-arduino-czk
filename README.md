@@ -16,8 +16,9 @@
 
 #### Základní nastavení spustíte přidržením tlačítek ADD + MINUS
 
+H,P,F opakujte podle E nastavených počtu druhů mincí:
+
 - E počet druhů mincí které budou akceptovány
-  - Toto opakujte podle E nastavených počtu druhů mincí:
   - H počet vzorků mincí
   - P počet impulsů
   - F přesnost snímání - doporučeno výrobcem: 8
