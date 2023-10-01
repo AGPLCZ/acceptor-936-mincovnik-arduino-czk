@@ -11,7 +11,7 @@ Tento kód funguje tak, že při detekci mince se aktivuje přerušení (funkce 
 > Arduino UNO R3 Wifi, Arduino UNO R4 Wifi: musíte napájet 12V kvůli mincovníku (nestačí USB) 
 
 
-### Zapojení mincovníku
+### 🟦Zapojení mincovníku
 - (Mincovník) DC 12 (červený drát)  --> V in (arduino)
 - (Mincovník) GND (černý drát)      --> GND (arduino)
 - (Mincovník) COIN (bílí drát)
