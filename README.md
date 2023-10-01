@@ -1,8 +1,8 @@
 # acceptor-936-mincovnik-arduino-czk
 
 ### Mincovník "acceptor-936" 
-
-- po vhození přednastavené částky se vypíše zpráva a může se například sepnout relé (či načíst webová adresa - GET)
+> [!NOTE]  
+> po vhození přednastavené částky se vypíše zpráva a může se například sepnout relé (či načíst webová adresa - GET)
 
 Tento kód funguje tak, že při detekci mince se aktivuje přerušení (funkce preruseniPriVhozuMince), což zvýší celkový počet detekovaných mincí. V hlavní smyčce loop kontrolujeme, zda uplynul dostatečný čas od poslední detekce a zda současný zůstatek dosáhl požadované ceny. Pokud ano, posíláme zprávu a vynulujeme současný zůstatek a celkový počet detekovaných mincí.
 
@@ -75,8 +75,7 @@ H,P,F opakujte podle E nastavených počtu druhů mincí:
 ◻️◼️◾️◽️▪️▫️
 
 
-> [!NOTE]  
-> Highlights information that users should take into account, even when skimming.
+
 
 > [!IMPORTANT]  
 > Crucial information necessary for users to succeed.
