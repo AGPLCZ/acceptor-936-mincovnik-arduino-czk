@@ -15,7 +15,10 @@
 ### Zapojení mincovníku
 - (Mincovník) DC 12 (červený drát)  --> V in (arduino)
 - (Mincovník) GND (černý drát)      --> GND (arduino)
-- 
+- (Mincovník) COIN (bílí drát)
+  - --> digital pin 2
+  - --> REZISTOR 10KΩ --> 5V
+  
 
 
 
