@@ -1,28 +1,28 @@
-const int pinMince = 2; // Pin, na kterém detekujeme signál z mincovníku
-const int cena = 75; // Cena v centech/korunách, která musí být dosažena
-volatile long pocetPreruseni = 0; // Počet přerušení, která byla vyvolána (kolikrát byla vhazována mince)
-unsigned long zustatek = 0; // Aktuální zůstatek
-unsigned long posledniCasPreruseni = 0; // Čas posledního přerušení
+const int pinDetekceMince = 2; // Pin, na který je připojen detektor mincí
+const int pozadovanaCena = 75; // Cena, která musí být dosažena pro uvolnění zboží
+volatile long celkovyPocetPreruseni = 0; // Celkový počet detekovaných mincí
+unsigned long soucasnyZustatek = 0; // Aktuální nahromaděná hodnota mincí
+unsigned long casPoslednihoPreruseni = 0; // Čas poslední detekované mince
 
 void setup() {
-  Serial.begin(9600); // Inicializace sériové komunikace s rychlostí 9600 baudů
-  attachInterrupt(digitalPinToInterrupt(pinMince), preruseniMince, RISING); // Nastavení přerušení na pinu mince
+  Serial.begin(9600); // Inicializace sériového portu s rychlostí 9600 baudů
+  attachInterrupt(digitalPinToInterrupt(pinDetekceMince), preruseniPriVhozuMince, RISING); // Nastavení přerušení pro detekci mince
 }
 
 void loop() {
-  // Kontrola, zda uplynul dostatečný čas od posledního přerušení a zda bylo vyvoláno nějaké přerušení
-  if (millis() - posledniCasPreruseni > 1 && pocetPreruseni > 0) {
-    zustatek += pocetPreruseni; // Přičtení počtu přerušení k zůstatku
-    if (zustatek >= cena) { // Kontrola, zda je zůstatek větší nebo roven ceně
-      Serial.println("balanceReached"); // Vypsání zprávy, že zůstatek dosáhl ceny
-      zustatek = 0; // Resetování zůstatku po dosažení ceny
+  // Zkontrolujeme, zda od posledního přerušení uplynul dostatečný čas a zda byla detekována nějaká mince
+  if (millis() - casPoslednihoPreruseni > 1 && celkovyPocetPreruseni > 0) {
+    soucasnyZustatek += celkovyPocetPreruseni; // Přičteme počet detekovaných mincí k současnému zůstatku
+    if (soucasnyZustatek >= pozadovanaCena) { // Pokud je současný zůstatek větší nebo roven požadované ceně
+      Serial.println("balanceReached"); // Pošleme zprávu, že požadovaná cena byla dosažena
+      soucasnyZustatek = 0; // Vynulujeme současný zůstatek
     }
-    Serial.println("Zustatek: " + String(zustatek) + " Kc"); // Vypsání aktuálního zůstatku
-    pocetPreruseni = 0; // Resetování počtu přerušení
+    Serial.println("Zustatek: " + String(soucasnyZustatek) + " Kc"); // Vypíšeme aktuální zůstatek
+    celkovyPocetPreruseni = 0; // Vynulujeme počet detekovaných mincí
   }
 }
 
-void preruseniMince() {
-  pocetPreruseni++; // Inkrementace počtu přerušení (přičtení mince)
-  posledniCasPreruseni = millis(); // Aktualizace času posledního přerušení
+void preruseniPriVhozuMince() {
+  celkovyPocetPreruseni++; // Zaznamenáme novou detekovanou minci
+  casPoslednihoPreruseni = millis(); // Aktualizujeme čas poslední detekce
 }
