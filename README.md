@@ -20,6 +20,8 @@ Tento kód funguje tak, že při detekci mince se aktivuje přerušení (funkce 
   - --> REZISTOR 10KΩ --> 5V
   
 
+> [!WARNING]  
+> Přerušte drát a vložte ------REZISTOR 10KΩ-----------  
 
 
 
@@ -78,11 +80,6 @@ H,P,F opakujte podle E nastavených počtu druhů mincí:
 
 
 
-> [!IMPORTANT]  
-> Crucial information necessary for users to succeed.
-
-> [!WARNING]  
-> Critical content demanding immediate user attention due to potential risks.
 
 
 $\mathcal{\color{purple}{this \ is \ a \ paragraph} \ \color{cyan}{in \ another \ font}}$
