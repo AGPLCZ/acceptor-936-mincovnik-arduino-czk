@@ -113,7 +113,7 @@ Text inside bordered Box
 
 $\fbox{Hello there}$
 
-
+$\colorbox{red}{ahoooj  }$
 
 $\color[rgb]{1,0,1} hello$
 
