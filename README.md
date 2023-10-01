@@ -46,11 +46,11 @@ H,P,F opakujte podle E nastavených počtu druhů mincí:
 
 #### Párování - snímání mincí  SET
 - Stiskněte **SET 2x**
-- Vhoďtě 5 CZK do mincovníku (opakujte podle H) 
-- Stiknětě **SET 1x**
-- Vhoďtě 10 CZK do mincovníku (opakujte podle H)
-- Stiknětě **SET 1x**
-- Vhoďtě 20 CZK do mincovníku (opakujte podle H)
-- Stiknětě **SET 1x**
-- Vhoďtě 50 CZK do mincovníku (opakujte podle H)
+- Vhoďte 5 CZK do mincovníku (opakujte podle H) 
+- Stikněte **SET 1x**
+- Vhoďte 10 CZK do mincovníku (opakujte podle H)
+- Stikněte **SET 1x**
+- Vhoďte 20 CZK do mincovníku (opakujte podle H)
+- Stikněte **SET 1x**
+- Vhoďte 50 CZK do mincovníku (opakujte podle H)
 
