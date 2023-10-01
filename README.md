@@ -19,9 +19,9 @@
 H,P,F opakujte podle E nastavených počtu druhů mincí:
 
 - E počet druhů mincí které budou akceptovány
-  - H počet vzorků mincí
-  - P počet impulsů
-  - F přesnost snímání - doporučeno výrobcem: 8
+- H počet vzorků mincí
+- P počet impulsů
+- F přesnost snímání - doporučeno výrobcem: 8
 
 #### Impulsy - P
 - 5 impuls = 5 CZK
