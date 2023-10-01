@@ -1,6 +1,11 @@
-#### acceptor-936-mincovnik-arduino-czk
-Arduino uno R3 
+# acceptor-936-mincovnik-arduino-czk
 
+### Mincovník "acceptor-936" 
+
+- impulzy
+- at least around 44 letters if made only from completely random letters
+
+#### Impulsy - P
 - 5 impuls = 5 CZK
 - 10 impuls = 10 CZK
 - 20 impuls = 20 CZK
@@ -8,18 +13,16 @@ Arduino uno R3
 
 
 > [!IMPORTANT]  
-> LC4-67 was `created by translating the python script ls47.py` into javascript.
+> Arduino UNO R3 Wifi, Arduino UNO R4 Wifi 
 
 
-### Key expansion from a password
+### Nastavení mincovníku "acceptor-936" 
 
-Remembering 49-position random permutation that includes weird characters is
-not very handy. You can instead derive the keys from an arbitrary string of
-sufficient length.
+Základní nastavení spustíte přidržením tlačítek ADD + MINUS
 
-"Sufficient" means "provides enough entropy". Full keys store around 208 bits
-of entropy. To reach that, your password should have:
+- E počet druhů mincí které budou akceptovány
+- Toto opakujte pro každou minci:
+  - H počet vzorků mincí
+  - P počet impulsů
+  - F přesnost snímání - doporučeno výrobcem: 8
 
-- at least around 61 decimal digits if made only from random decimal digits
-- at least around 44 letters if made only from completely random letters
-- at least around 40 alphanumeric characters if made randomly only from them
