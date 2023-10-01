@@ -3,6 +3,7 @@
 ### Mincovník "acceptor-936" 
 
 - po vhození přednastavené částky se vypíše zpráva a může se například sepnout relé (či načíst webová adresa - GET)
+- after throwing a preset amount, a message is displayed and, for example, a relay can be switched (or a web address can be retrieved - GET)
 
 Tento kód funguje tak, že při detekci mince se aktivuje přerušení (funkce preruseniPriVhozuMince), což zvýší celkový počet detekovaných mincí. V hlavní smyčce loop kontrolujeme, zda uplynul dostatečný čas od poslední detekce a zda současný zůstatek dosáhl požadované ceny. Pokud ano, posíláme zprávu a vynulujeme současný zůstatek a celkový počet detekovaných mincí.
 
