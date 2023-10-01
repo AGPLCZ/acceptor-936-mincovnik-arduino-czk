@@ -54,3 +54,11 @@ H,P,F opakujte podle E nastavených počtu druhů mincí:
 - Stikněte **SET 1x**
 - Vhoďte 50 CZK do mincovníku (opakujte podle H)
 
+#### Impulsy - P EUR    /5   *5
+- 2 impuls = 10 cent
+- 5 impuls = 20 cent 
+- 10 impuls = 50 cent
+- 20 impuls = (100 cent) 1 EUR
+- 40 impuls = (200 cent) 2 EUR
+
+výslednou částku vynásobte:   celkova_castka * 5 
