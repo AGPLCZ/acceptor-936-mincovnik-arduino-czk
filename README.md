@@ -2,9 +2,7 @@
 
 ### Mincovník "acceptor-936" 
 
-- impulzy
-- at least around 44 letters if made only from completely random letters
-
+- po vhození přednastavené částky se vypíše zpráva a může se například sepnout relé (či načíst webová adresa - GET)
 
 
 > [!IMPORTANT]  
