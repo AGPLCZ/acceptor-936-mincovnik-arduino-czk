@@ -28,7 +28,7 @@
 - 20 impuls = 20 CZK
 - 50 impuls = 50 CZK
 
-#### Párování - snímání mincí
+#### Párování - snímání mincí  SET
 - Stiskněte SET 2x
 - Vhoďtě 5 CZK do mincovníku (opakujte podle H) 
 - Stiknětě SET 1x
