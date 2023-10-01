@@ -7,9 +7,8 @@
 
 
 
-
 > [!IMPORTANT]  
-> Arduino UNO R3 Wifi, Arduino UNO R4 Wifi 
+> Arduino UNO R3 Wifi, Arduino UNO R4 Wifi: musíte napájet 12V kvůli mincovníku (nestačí USB) 
 
 
 ### Zapojení mincovníku
