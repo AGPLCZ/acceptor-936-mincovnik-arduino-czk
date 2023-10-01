@@ -4,7 +4,14 @@
 
 - po vhození přednastavené částky se vypíše zpráva a může se například sepnout relé (či načíst webová adresa - GET)
 
-Tento kód v CZK funguje tak, že při detekci mince se aktivuje přerušení (funkce preruseniPriVhozuMince), což zvýší celkový počet detekovaných mincí. V hlavní smyčce loop kontrolujeme, zda uplynul dostatečný čas od poslední detekce a zda současný zůstatek dosáhl požadované ceny. Pokud ano, posíláme zprávu a vynulujeme současný zůstatek a celkový počet detekovaných mincí.
+Tento kód funguje tak, že při detekci mince se aktivuje přerušení (funkce preruseniPriVhozuMince), což zvýší celkový počet detekovaných mincí. V hlavní smyčce loop kontrolujeme, zda uplynul dostatečný čas od poslední detekce a zda současný zůstatek dosáhl požadované ceny. Pokud ano, posíláme zprávu a vynulujeme současný zůstatek a celkový počet detekovaných mincí.
+
+This code works by activating an interrupt (function coinInsertInterrupt) upon coin detection, incrementing the total number of detected coins. In the main loop (loop), it checks if enough time has passed since the last detection and if the current balance has reached the required amount. If so, it sends a message and resets the current balance and the total number of detected coins.
+
+
+
+
+
 
 
 > [!IMPORTANT]  
