@@ -1,6 +1,7 @@
 # acceptor-936-mincovnik-arduino-czk
 
 ### Mincovník "acceptor-936" 
+
 > [!NOTE]  
 > po vhození přednastavené částky se vypíše zpráva a může se například sepnout relé (či načíst webová adresa - GET)
 
