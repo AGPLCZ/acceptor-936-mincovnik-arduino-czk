@@ -14,7 +14,9 @@
 
 ### Nastavení mincovníku "acceptor-936" 
 
-#### Základní nastavení spustíte přidržením tlačítek ADD + MINUS
+#### Základní nastavení 
+
+Nastavení mincovníku vyvoláte přidržením tlačítek ADD + MINUS
 
 H,P,F opakujte podle E nastavených počtu druhů mincí:
 
