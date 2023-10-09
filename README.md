@@ -64,3 +64,8 @@ H,P,F opakujte podle E nastavených počtu druhů mincí:
 - 40 impuls = (200 cent) 2 EUR
 
 Výslednou částku vynásobte: **soucasnyZustatek * 5** = 280 cent 
+
+
+
+### Zdroje:
+https://docs.arduino.cc/tutorials/uno-r4-wifi/wifi-examples
