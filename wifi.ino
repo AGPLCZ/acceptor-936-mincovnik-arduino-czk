@@ -1,14 +1,19 @@
-#include <WiFiNINA.h>
+#include "WiFiS3.h"
+#include "WiFiSSLClient.h"
 
+#define SECRET_SSID "TP-LINK_9228"
+#define SECRET_PASS "dekujizawifi"
+
+char ssid[] = SECRET_SSID;
+char pass[] = SECRET_PASS;
+int status = WL_IDLE_STATUS;
+WiFiSSLClient client;
+
+char server[] = "dobrodruzi.cz";
 const int coin = 2;
 volatile long totalInterrupts = 0;
 unsigned long balance = 0;
 unsigned long lastInterruptTime = 0;
-
-char ssid[] = "your_network_name"; // your network SSID (name)
-char pass[] = "your_network_password"; // your network password
-
-int status = WL_IDLE_STATUS; // the WiFi radio's status
 
 void setup() {
   Serial.begin(9600);
@@ -32,7 +37,7 @@ void loop() {
   if (millis() - lastInterruptTime > 1 && totalInterrupts > 0) {
     balance += totalInterrupts;
     if (balance >= 75) {
-      sendGetRequest();
+      sendGetRequest(balance);
       balance = 0; // Reset balance after reaching the target
     }
     Serial.println("Zustatek: " + String(balance) + " Kc");
@@ -40,18 +45,18 @@ void loop() {
   }
 }
 
-void sendGetRequest() {
-  WiFiClient client;
-  
-  if (client.connect("your_server_ip_or_domain", 80)) {
-    client.println("GET /your_script.php?balanceReached=true HTTP/1.1");
-    client.println("Host: your_server_ip_or_domain");
+void sendGetRequest(unsigned long balance) {
+  if (client.connect(server, 443)) {
+    Serial.println("Connecting to server...");
+    client.print("GET /mince.php?zaplaceno=1&kolik_vhozeno=");
+    client.print(balance);
+    client.println(" HTTP/1.1");
+    client.println("Host: dobrodruzi.cz");
     client.println("Connection: close");
     client.println();
   } else {
     Serial.println("Connection to server failed");
   }
-  
   delay(5000);
 }
 
