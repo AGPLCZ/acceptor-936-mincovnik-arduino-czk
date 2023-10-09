@@ -1,7 +1,8 @@
 #include "WiFiS3.h"
 #include "WiFiSSLClient.h"
 
-#define SECRET_SSID "TP-LINK_9228"
+//#define SECRET_SSID "TP-LINK_9228"
+#define SECRET_SSID "ag"
 #define SECRET_PASS "dekujizawifi"
 
 char ssid[] = SECRET_SSID;
@@ -44,21 +45,28 @@ void loop() {
     totalInterrupts = 0;
   }
 }
-
 void sendGetRequest(unsigned long balance) {
-  if (client.connect(server, 443)) {
-    Serial.println("Connecting to server...");
-    client.print("GET /mince.php?zaplaceno=1&kolik_vhozeno=");
-    client.print(balance);
-    client.println(" HTTP/1.1");
-    client.println("Host: dobrodruzi.cz");
-    client.println("Connection: close");
-    client.println();
-  } else {
-    Serial.println("Connection to server failed");
+  int attempts = 3;
+  for (int i = 0; i < attempts; i++) {
+    if (client.connect(server, 443)) {
+      Serial.println("Connecting to server...");
+      client.print("GET /mince.php?zaplaceno=1&kolik_vhozeno=");
+      client.print(balance);
+      client.println(" HTTP/1.1");
+      client.println("Host: dobrodruzi.cz");
+      client.println("Connection: close");
+      client.println();
+      break; // Připojení úspěšné, opustit cyklus
+    } else {
+      Serial.println("Connection to server failed");
+      if (i < attempts - 1) { // Pokud to není poslední pokus
+        Serial.println("Retrying...");
+        delay(5000); // Pauza 5 sekund před dalším pokusem
+      }
+    }
   }
-  delay(5000);
 }
+
 
 void coinInterrupt() {
   totalInterrupts++;
